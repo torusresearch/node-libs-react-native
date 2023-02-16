@@ -12,3 +12,9 @@ global.navigator.userAgent = 'React Native';
 const { encode, decode } = require("base-64");
 global.atob = decode;
 global.btoa = encode;
+
+global.process.version = "v16.0.0";
+if (!global.process) {
+  global.process = require("process");
+  console.log({ process: global.process });
+}
